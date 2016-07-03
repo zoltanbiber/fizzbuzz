@@ -1,3 +1,32 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$peach: #fc5b77;
+$lightgreen: green;
+$indigo: blue;
+
+* { margin: 0; padding: 0; }
+
+.header {
+	background-color: $peach;
+	text-align: center;
+	color: #ffffff;
+	height: 100%;
+}
+
+h3 { text-align: center; }
+
+li {
+	display: inline-block;
+	color: $indigo;
+	border: 1px solid;
+	padding: 5px;
+	margin: 5px;
+}
+
+.page-size-modifier {
+	text-align: center;
+}
+
+.pagination { text-align: center; }

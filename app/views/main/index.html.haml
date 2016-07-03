@@ -1,1 +1,18 @@
-%h1 Hola
+%section.header
+	%h1 FizzBuzz
+
+%h3 Welcome to the FizzBuzz app. Please click on the numbers to make them your favourites!
+
+.page-size-modifier
+	%p Choose how many numbers would you like to see on the page
+	= link_to  '50'
+	= link_to '100'
+	= link_to '200'
+
+%ul
+	- @numbers.each do |n|
+		%li= n
+
+.pagination
+	= link_to 'PREVIOUS PAGE'
+	= link_to 'NEXT PAGE'

@@ -5,14 +5,14 @@
 
 .page-size-modifier
 	%p Choose how many numbers would you like to see on the page
-	= link_to  '50'
-	= link_to '100'
-	= link_to '200'
+	= link_to  '50', root_path(per_page:  50)
+	= link_to '100', root_path(per_page: 100)
+	= link_to '200', root_path(per_page: 200)
 
 %ul
 	- @numbers.each do |n|
 		%li= n
 
 .pagination
-	= link_to 'PREVIOUS PAGE'
-	= link_to 'NEXT PAGE'
+	= link_to 'PREVIOUS PAGE', root_path(per_page: @per_page, offset: @offset > 0 ? @offset - 1 : 0)
+	= link_to 'NEXT PAGE', root_path(per_page: @per_page, offset: @offset + 1)

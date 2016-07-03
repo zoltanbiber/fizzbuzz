@@ -21,7 +21,7 @@ class FizzBuzz
 	end
 
 	def params_are_numbers
-		unless (per_page != '0' && per_page.to_i != 0) && (offset ? offset != '0' && offset.to_i != 0 : true)
+		unless (per_page != '0' && per_page.to_i != 0) && (offset && offset != '0' ? offset.to_i != 0 : true)
 			errors.add(:base, 'Query parameters must be numbers.')
 		end
 	end
